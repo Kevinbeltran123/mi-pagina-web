@@ -1,65 +1,205 @@
 <!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="es">
 	<head>
-		<title>DevOps</title>
+		<title>DevOps - Codificación y Desarrollo Continuo</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Estilos generales */
+			body {
+				font-family: 'Arial', sans-serif;
+				background: linear-gradient(135deg, #FF6F61, #FFD700); /* Fondo cálido con gradiente */
+				color: #333;
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			/* Estilos del header */
+			#header {
+				background-color: #2c3e50;
+				padding: 20px 0;
+				color: #fff;
+			}
+
+			#header .inner {
+				width: 100%;
+				max-width: 1200px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			#header .logo {
+				font-size: 24px;
+				font-weight: bold;
+				text-decoration: none;
+				color: #fff;
+				display: flex;
+				align-items: center;
+			}
+
+			#header .logo .symbol {
+				width: 40px;
+				height: auto;
+				margin-right: 10px;
+			}
+
+			#header nav ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			#header nav ul li {
+				display: inline-block;
+				margin-left: 20px;
+			}
+
+			#header nav ul li a {
+				color: #fff;
+				text-decoration: none;
+				font-size: 18px;
+				transition: color 0.3s ease;
+			}
+
+			#header nav ul li a:hover {
+				color: #3498db;
+			}
+
+			/* Estilos del contenido principal */
+			#main {
+				padding: 40px 20px;
+				background-color: #fff;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+				margin-top: 20px;
+				border-radius: 10px;
+				max-width: 1200px;
+				margin: 40px auto;
+			}
+
+			#main h1 {
+				font-size: 32px;
+				color: #2c3e50;
+				text-align: center;
+				margin-bottom: 30px;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+
+			#main p {
+				font-size: 18px;
+				line-height: 1.6;
+				margin-bottom: 20px;
+			}
+
+			#main b {
+				font-weight: bold;
+				color: #3498db;
+			}
+
+			/* Estilos de las imágenes */
+			#main .image {
+				width: 100%;
+				max-width: 600px;
+				margin: 20px auto;
+				display: block;
+				border-radius: 8px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+
+			#main .image img {
+				width: 100%;
+				border-radius: 8px;
+				transition: transform 0.3s ease;
+			}
+
+			#main .image img:hover {
+				transform: scale(1.05); /* Efecto de zoom en la imagen */
+			}
+
+			/* Botón */
+			#main .button {
+				background-color: #3498db;
+				color: white;
+				padding: 12px 24px;
+				font-size: 16px;
+				text-align: center;
+				border-radius: 8px;
+				text-decoration: none;
+				display: inline-block;
+				margin: 20px 0;
+				transition: background-color 0.3s ease;
+			}
+
+			#main .button:hover {
+				background-color: #2980b9;
+			}
+
+			/* Efectos y animaciones */
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+
+			#main {
+				animation: fadeIn 1s ease-out;
+			}
+
+		</style>
 	</head>
+
 	<body class="is-preload">
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<!-- Logo -->
+					<a href="index.html" class="logo">
+						<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">DevOps</span>
+					</a>
 
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">DevOps</span>
-								</a>
+					<!-- Nav -->
+					<nav>
+						<ul>
+							<li><a href="#menu">Menu</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<h1>Codificación -- Desarrollo Continuo</h1>
-							<span class="image main"><img src="images/codigo.jpg" alt="" /></span>
-							<p>En la fase de codificación, los desarrolladores crean el software siguiendo los requisitos definidos durante la planificación. Sin embargo, en DevOps, la codificación no es un proceso aislado que ocurre en solitario; es un proceso que está estrechamente vinculado con el resto de las fases del ciclo de vida.</p>
-							<p><b>Desarrollo colaborativo:</b> Los desarrolladores trabajan en un entorno colaborativo y están conectados con el equipo de operaciones. Esta comunicación continua ayuda a entender las implicaciones de las decisiones de codificación para la infraestructura, los entornos de despliegue y la seguridad del sistema.</p>
-							<p><b>Control de versiones:</b> En DevOps, la codificación se maneja con herramientas de control de versiones como Git. Cada desarrollador realiza cambios en ramas separadas y luego las fusiona en el repositorio principal. Esta estrategia asegura que las modificaciones se manejen de manera ordenada y que se pueda rastrear el historial de cambios fácilmente.</p>
-							<span class="image main">
-								<img src="images/git.png" alt="" style="width: 150px; height: auto;" />
-							</span>
-                            <p><b>Mejores prácticas de desarrollo:</b> Los desarrolladores también aplican estándares de codificación y patrones de diseño para garantizar que el código sea limpio, eficiente y seguro. Además, se promueve el uso de pruebas unitarias desde el inicio para detectar errores de forma temprana.</p>
-						
-						</div>
-					</div>
-
-
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<h1>Codificación -- Desarrollo Continuo</h1>
+					<span class="image main"><img src="images/codigo.jpg" alt="" /></span>
+					<p>En la fase de codificación, los desarrolladores crean el software siguiendo los requisitos definidos durante la planificación. Sin embargo, en DevOps, la codificación no es un proceso aislado que ocurre en solitario; es un proceso que está estrechamente vinculado con el resto de las fases del ciclo de vida.</p>
+					<p><b>Desarrollo colaborativo:</b> Los desarrolladores trabajan en un entorno colaborativo y están conectados con el equipo de operaciones. Esta comunicación continua ayuda a entender las implicaciones de las decisiones de codificación para la infraestructura, los entornos de despliegue y la seguridad del sistema.</p>
+					<p><b>Control de versiones:</b> En DevOps, la codificación se maneja con herramientas de control de versiones como Git. Cada desarrollador realiza cambios en ramas separadas y luego las fusiona en el repositorio principal. Esta estrategia asegura que las modificaciones se manejen de manera ordenada y que se pueda rastrear el historial de cambios fácilmente.</p>
+					<span class="image main">
+						<img src="images/git.png" alt="" style="width: 150px; height: auto;" />
+					</span>
+					<p><b>Mejores prácticas de desarrollo:</b> Los desarrolladores también aplican estándares de codificación y patrones de diseño para garantizar que el código sea limpio, eficiente y seguro. Además, se promueve el uso de pruebas unitarias desde el inicio para detectar errores de forma temprana.</p>
+				</div>
 			</div>
 
+		</div>
+
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

@@ -1,62 +1,203 @@
 <!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="es">
 	<head>
-		<title>DevOps</title>
+		<title>DevOps - Compilación e Integración Continua</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Estilos generales */
+			body {
+				font-family: 'Arial', sans-serif;
+				background: linear-gradient(135deg, #FF6F61, #FFD700); /* Fondo cálido con gradiente */
+				color: #333;
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			/* Estilos del header */
+			#header {
+				background-color: #2c3e50;
+				padding: 20px 0;
+				color: #fff;
+			}
+
+			#header .inner {
+				width: 100%;
+				max-width: 1200px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			#header .logo {
+				font-size: 24px;
+				font-weight: bold;
+				text-decoration: none;
+				color: #fff;
+				display: flex;
+				align-items: center;
+			}
+
+			#header .logo .symbol {
+				width: 40px;
+				height: auto;
+				margin-right: 10px;
+			}
+
+			#header nav ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			#header nav ul li {
+				display: inline-block;
+				margin-left: 20px;
+			}
+
+			#header nav ul li a {
+				color: #fff;
+				text-decoration: none;
+				font-size: 18px;
+				transition: color 0.3s ease;
+			}
+
+			#header nav ul li a:hover {
+				color: #3498db;
+			}
+
+			/* Estilos del contenido principal */
+			#main {
+				padding: 40px 20px;
+				background-color: #fff;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+				margin-top: 20px;
+				border-radius: 10px;
+				max-width: 1200px;
+				margin: 40px auto;
+			}
+
+			#main h1 {
+				font-size: 32px;
+				color: #2c3e50;
+				text-align: center;
+				margin-bottom: 30px;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+
+			#main p {
+				font-size: 18px;
+				line-height: 1.6;
+				margin-bottom: 20px;
+			}
+
+			#main b {
+				font-weight: bold;
+				color: #3498db;
+			}
+
+			/* Estilos de las imágenes */
+			#main .image {
+				width: 100%;
+				max-width: 600px;
+				margin: 20px auto;
+				display: block;
+				border-radius: 8px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+
+			#main .image img {
+				width: 100%;
+				border-radius: 8px;
+				transition: transform 0.3s ease;
+			}
+
+			#main .image img:hover {
+				transform: scale(1.05); /* Efecto de zoom en la imagen */
+			}
+
+			/* Botón */
+			#main .button {
+				background-color: #3498db;
+				color: white;
+				padding: 12px 24px;
+				font-size: 16px;
+				text-align: center;
+				border-radius: 8px;
+				text-decoration: none;
+				display: inline-block;
+				margin: 20px 0;
+				transition: background-color 0.3s ease;
+			}
+
+			#main .button:hover {
+				background-color: #2980b9;
+			}
+
+			/* Efectos y animaciones */
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+
+			#main {
+				animation: fadeIn 1s ease-out;
+			}
+
+		</style>
 	</head>
+
 	<body class="is-preload">
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<!-- Logo -->
+					<a href="index.html" class="logo">
+						<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">DevOps</span>
+					</a>
 
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">DevOps</span>
-								</a>
+					<!-- Nav -->
+					<nav>
+						<ul>
+							<li><a href="#menu">Menu</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<h1>Compilación -- Integración Continua</h1>
-							<span class="image main"><img src="images/compilar.avif" alt="" /></span>
-							<p>La fase de compilación en DevOps es el proceso mediante el cual el código fuente que los desarrolladores han escrito se convierte en una versión ejecutable. En el pasado, esta fase solía ser un proceso manual que se realizaba al final del ciclo de desarrollo. Sin embargo, en DevOps, la compilación es un proceso automatizado que ocurre con frecuencia durante el ciclo de vida del desarrollo.</p>
-							<p><b>Automatización de la compilación:</b> Con herramientas de integración continua (CI) como Jenkins, GitLab CI, o CircleCI, la compilación se realiza automáticamente cada vez que se realizan cambios en el repositorio. Esto significa que cada vez que un desarrollador sube código, se desencadena una compilación automática, lo que garantiza que el código se compile sin errores y se valide desde el inicio.</p>
-							<p><b>Pruebas automatizadas:</b> La compilación no solo incluye la traducción del código, sino también la ejecución de pruebas unitarias, de integración y de extremo a extremo. Si alguna de estas pruebas falla, la compilación se detiene y el desarrollador recibe una notificación inmediata para corregir el problema.</p>
-							<p><b>Integración temprana:</b> La compilación automática permite la integración temprana del código, lo que ayuda a evitar los problemas de "integración tardía" que pueden surgir en proyectos más grandes. Los desarrolladores reciben retroalimentación instantánea sobre su código.</p>
-						
-						</div>
-					</div>
-
-
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<h1>Compilación -- Integración Continua</h1>
+					<span class="image main"><img src="images/compilar.avif" alt="" /></span>
+					<p>La fase de compilación en DevOps es el proceso mediante el cual el código fuente que los desarrolladores han escrito se convierte en una versión ejecutable. En el pasado, esta fase solía ser un proceso manual que se realizaba al final del ciclo de desarrollo. Sin embargo, en DevOps, la compilación es un proceso automatizado que ocurre con frecuencia durante el ciclo de vida del desarrollo.</p>
+					<p><b>Automatización de la compilación:</b> Con herramientas de integración continua (CI) como Jenkins, GitLab CI, o CircleCI, la compilación se realiza automáticamente cada vez que se realizan cambios en el repositorio. Esto significa que cada vez que un desarrollador sube código, se desencadena una compilación automática, lo que garantiza que el código se compile sin errores y se valide desde el inicio.</p>
+					<p><b>Pruebas automatizadas:</b> La compilación no solo incluye la traducción del código, sino también la ejecución de pruebas unitarias, de integración y de extremo a extremo. Si alguna de estas pruebas falla, la compilación se detiene y el desarrollador recibe una notificación inmediata para corregir el problema.</p>
+					<p><b>Integración temprana:</b> La compilación automática permite la integración temprana del código, lo que ayuda a evitar los problemas de "integración tardía" que pueden surgir en proyectos más grandes. Los desarrolladores reciben retroalimentación instantánea sobre su código.</p>
+				
+				</div>
 			</div>
 
+		</div>
+
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
